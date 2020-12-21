@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "278318944533",
+    "project_id": "catatankeuanganpribadiv2",
+    "storage_bucket": "catatankeuanganpribadiv2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278318944533:android:d7a192a5095f838113d91c",
+        "android_client_info": {
+          "package_name": "com.rikamersita.catatankeuanganpribadi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278318944533-u8e8tmcavj6ibtk7ncenl7tn6inv61uo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCca1QfpBMT9YHRGYevtfb6cEzk1jKGcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278318944533-u8e8tmcavj6ibtk7ncenl7tn6inv61uo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278318944533:android:46fafa4ce845eb8713d91c",
+        "android_client_info": {
+          "package_name": "com.rikamersita.versibaru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278318944533-u8e8tmcavj6ibtk7ncenl7tn6inv61uo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCca1QfpBMT9YHRGYevtfb6cEzk1jKGcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278318944533-u8e8tmcavj6ibtk7ncenl7tn6inv61uo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
