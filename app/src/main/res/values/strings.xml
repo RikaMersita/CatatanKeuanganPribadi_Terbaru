@@ -81,4 +81,5 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="logout">logout</string>
+    <string name="action_about" />
 </resources>
