@@ -8,106 +8,137 @@
     android:orientation="vertical"
     tools:context=".login.Login">
 
+    <ImageView
+        android:id="@+id/iv_auth_bg"
+        android:layout_width="350dp"
+        android:layout_height="264dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_auth_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:id="@+id/rlay"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp">
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masuk"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Silakan masuk untuk melanjutkan"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="normal"/>
+
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="60dp"
-            android:text="LogInApp"
-            android:textColor="#000"
-            android:textSize="50dp"
-            android:textStyle="bold" />
+            android:layout_width="147dp"
+            android:layout_height="34dp"
+            android:text="Selamat datang"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:srcCompat="@drawable/user" />
+
+            </LinearLayout>
         <EditText
             android:id="@+id/luser"
-            android:background="@drawable/etstyle"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:paddingLeft="8dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btnutama"
+            android:drawableStart="@drawable/userr"
+            android:drawablePadding="16sp"
             android:hint="Username"
             android:inputType="text"
             android:maxLines="1"
+            android:paddingLeft="8dp"
             android:singleLine="true" />
 
         <EditText
             android:id="@+id/lpass"
-            android:background="@drawable/etstyle"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:paddingLeft="8dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnutama"
+            android:drawableStart="@drawable/lock"
+            android:drawablePadding="16sp"
             android:hint="Password"
             android:inputType="textPassword"
             android:maxLines="1"
+            android:paddingLeft="8dp"
             android:singleLine="true" />
 
-            <CheckBox
-                android:id="@+id/showPass"
-                android:paddingLeft="8dp"
-                android:text="Show Password"
-                android:textSize="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"/>
+        <CheckBox
+            android:id="@+id/showPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="8dp"
+            android:text="Show Password"
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/btnstylesel"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btnutamaa"
             android:clickable="true"
             android:text="Log In"
             android:textColor="#fff" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/forgot"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="12sp"
             android:clickable="true"
-            android:gravity="left"
-            android:text="Forget password?" />
+            android:gravity="right"
+            android:layout_marginTop="10dp"
+            android:text="Lupa Password ?"
+            android:textStyle="bold" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/regis"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignBottom="@id/rlay"
-        android:clickable="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="                                                                                                              "
-            android:background="@drawable/textline"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/regis"
-            android:paddingTop="8dp"
-            android:textStyle="bold"
-            android:clickable="true"
-            android:layout_gravity="center_horizontal"
-            android:text="Don't have account? Sign up."/>
+        android:clickable="true"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="Belum Punya Akun? Daftar"
+        android:textStyle="bold" />
 
     </LinearLayout>
-
-
-
 </RelativeLayout>

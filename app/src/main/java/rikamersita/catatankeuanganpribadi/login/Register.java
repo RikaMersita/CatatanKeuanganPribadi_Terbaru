@@ -31,6 +31,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         dbHelper = new DBHelper(this);
+        getSupportActionBar().hide();
 
         name = (EditText) findViewById(R.id.name);
         pass = (EditText) findViewById(R.id.password);
@@ -79,6 +80,7 @@ public class Register extends AppCompatActivity {
             Toast.makeText(Register.this, "Data Inserted", Toast.LENGTH_LONG).show();
 
             Intent intent = new Intent(Register.this, Login.class);
+            finish();
             startActivity(intent);
         }
 
@@ -104,5 +106,10 @@ public class Register extends AppCompatActivity {
         Intent intent = new Intent(Register.this, Login.class);
         startActivity(intent);
         finish();
+    }
+
+    public void login(View view) {
+        Intent intent = new Intent(this,Login.class);
+        startActivity(intent);
     }
 }

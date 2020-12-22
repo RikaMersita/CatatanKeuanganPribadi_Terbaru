@@ -24,6 +24,7 @@ public class Login extends AppCompatActivity {
     EditText username1, pass;
     Button login;
     TextView regis;
+    TextView forgot;
     Cursor cursor;
     CheckBox show;
     DBHelper dbHelper;
@@ -35,8 +36,10 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         dbHelper = new DBHelper(this);
         db = dbHelper.getReadableDatabase();
+        getSupportActionBar().hide();
 
         regis = (TextView) findViewById(R.id.regis);
+        forgot = (TextView) findViewById(R.id.forgot);
 
         username1 = (EditText) findViewById(R.id.luser);
         pass = (EditText) findViewById(R.id.lpass);
@@ -46,6 +49,15 @@ public class Login extends AppCompatActivity {
         showPass();
 
         regis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, Register.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        forgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Login.this, Register.class);
@@ -78,6 +90,7 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(Login.this, "Logged In succesfully!",
                                 Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(Login.this, MainActivity.class);
+                        finish();
                         startActivity(intent);
                     } else {
                         Toast.makeText(Login.this, "Invalid username or password!",

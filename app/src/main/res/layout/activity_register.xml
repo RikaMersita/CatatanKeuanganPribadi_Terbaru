@@ -8,6 +8,8 @@
     android:orientation="vertical"
     tools:context=".login.Register">
 
+
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,18 +31,19 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginLeft="15sp"
         android:layout_marginRight="15sp"
-        android:layout_marginTop="0sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="15sp"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="50sp"
+            android:layout_height="50dp"
             android:layout_marginTop="25sp"
-            android:background="@drawable/etstyle"
+            android:background="@drawable/btnutama"
             android:hint="Name"
             android:inputType="text"
             android:maxLines="1"
@@ -52,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="50sp"
             android:layout_marginTop="25dp"
-            android:background="@drawable/etstyle"
+            android:background="@drawable/btnutama"
             android:hint="Username"
             android:inputType="text"
             android:maxLines="1"
@@ -64,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="50sp"
             android:layout_marginTop="25sp"
-            android:background="@drawable/etstyle"
+            android:background="@drawable/btnutama"
             android:hint="Password"
             android:inputType="textPassword"
             android:maxLines="1"
@@ -76,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="50sp"
             android:layout_marginTop="25sp"
-            android:background="@drawable/etstyle"
+            android:background="@drawable/btnutama"
             android:hint="Confirm Password"
             android:inputType="textPassword"
             android:maxLines="1"
@@ -97,11 +100,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25sp"
-            android:background="@drawable/btnstylesel"
+            android:background="@drawable/btnutamaa"
             android:onClick="signinBtn"
             android:clickable="true"
             android:text="Sign Up"
             android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="login"
+            android:text="Sudah Punya Akun? Masuk"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
