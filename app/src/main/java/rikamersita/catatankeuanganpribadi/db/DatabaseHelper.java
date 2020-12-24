@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
 
 public class DatabaseHelper extends SQLiteOpenHelper implements BaseColumns {
 
-    public static String DATABASE_NAME = "dbnoteapp";
+    public static String DATABASE_NAME = "db_catatan";
     public static String TABLE_NAME = "note";
     public static String FIELD_TITLE = "title";
     public static String FIELD_TIPE = "tipe";
