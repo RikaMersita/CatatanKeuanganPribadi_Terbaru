@@ -1,4 +1,4 @@
-package rikamersita.catatankeuanganpribadi.login;
+package rikamersita.catatankeuanganpribadi.db;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,7 +18,7 @@ public class LoginMainPage extends AppCompatActivity {
 
     Button view, logo;
     int k = 0;
-    DBHelper dbHelper;
+    DatabaseHelper databaseHelper;
     TextView show;
     EditText user, pass;
 
@@ -26,7 +26,7 @@ public class LoginMainPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_main_page);
-        dbHelper = new DBHelper(this);
+        databaseHelper = new DatabaseHelper(this);
 
         view = (Button)findViewById(R.id.view);
         logo = (Button) findViewById(R.id.logout);
@@ -37,7 +37,7 @@ public class LoginMainPage extends AppCompatActivity {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Cursor res = dbHelper.getData();
+                Cursor res = databaseHelper.getData();
                 StringBuilder stringB = new StringBuilder();
                 if(res!=null && res.getCount()>0){
                     while (res.moveToNext()){

@@ -1,4 +1,4 @@
-package rikamersita.catatankeuanganpribadi.login;
+package rikamersita.catatankeuanganpribadi.db;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,6 +19,10 @@ import android.widget.Toast;
 import rikamersita.catatankeuanganpribadi.MainActivity;
 import rikamersita.catatankeuanganpribadi.R;
 
+import static rikamersita.catatankeuanganpribadi.db.DatabaseHelper.COLUMN_PASSWORD;
+import static rikamersita.catatankeuanganpribadi.db.DatabaseHelper.COLUMN_USERNAME;
+import static rikamersita.catatankeuanganpribadi.db.DatabaseHelper.USER_TABLE;
+
 public class Login extends AppCompatActivity {
 
     EditText username1, pass;
@@ -27,15 +31,15 @@ public class Login extends AppCompatActivity {
     TextView forgot;
     Cursor cursor;
     CheckBox show;
-    DBHelper dbHelper;
+    DatabaseHelper databaseHelper;
     SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        dbHelper = new DBHelper(this);
-        db = dbHelper.getReadableDatabase();
+        databaseHelper = new DatabaseHelper(this);
+        db = databaseHelper.getReadableDatabase();
         getSupportActionBar().hide();
 
         regis = (TextView) findViewById(R.id.regis);
@@ -72,8 +76,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                cursor = db.rawQuery("SELECT * FROM " + DBHelper.USER_TABLE + " WHERE "
-                                + DBHelper.COLUMN_USERNAME + " =? AND " + DBHelper.COLUMN_PASSWORD + " =?",
+                cursor = db.rawQuery("SELECT * FROM " + USER_TABLE + " WHERE "
+                                + COLUMN_USERNAME + " =? AND " + COLUMN_PASSWORD + " =?",
                         new String[]{username1.getText().toString(), pass.getText().toString()});
 
                 if(username1.getText().toString().equals("")||

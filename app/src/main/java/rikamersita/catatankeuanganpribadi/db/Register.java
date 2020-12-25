@@ -1,4 +1,4 @@
-package rikamersita.catatankeuanganpribadi.login;
+package rikamersita.catatankeuanganpribadi.db;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -24,13 +24,13 @@ public class Register extends AppCompatActivity {
     Cursor cursor;
     SQLiteDatabase db;
     CheckBox rshow;
-    DBHelper dbHelper;
+    DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        dbHelper = new DBHelper(this);
+        databaseHelper = new DatabaseHelper(this);
         getSupportActionBar().hide();
 
         name = (EditText) findViewById(R.id.name);
@@ -73,7 +73,7 @@ public class Register extends AppCompatActivity {
 
 
         else {
-            dbHelper.addUser(name.getText().toString(),
+            databaseHelper.addUser(name.getText().toString(),
                     user1.getText().toString(), pass.getText().toString(),
                     cnfrmpass.getText().toString());
 

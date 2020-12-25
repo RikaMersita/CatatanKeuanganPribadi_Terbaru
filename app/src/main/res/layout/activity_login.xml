@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="15dp"
     android:orientation="vertical"
-    tools:context=".login.Login">
+    tools:context=".db.Login">
 
     <ImageView
         android:id="@+id/iv_auth_bg"
